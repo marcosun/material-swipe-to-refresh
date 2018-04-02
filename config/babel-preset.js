@@ -5,6 +5,7 @@ module.exports = {
     ['env', {
       modules: BABEL_ENV === 'cjs' ? 'commonjs' : false
     }],
-    'stage-0'
+    'stage-0',
+    'react'
   ]
 };
