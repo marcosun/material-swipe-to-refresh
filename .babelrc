@@ -1,9 +1,6 @@
 {
   "presets": ["./config/babel-preset"],
   "plugins": [
-    "transform-decorators-legacy",
-    ["direct-import", [
-      "material-ui"
-    ]]
+    "transform-decorators-legacy"
   ]
 }
