@@ -11,8 +11,11 @@ const styles = (theme) => ({
     height: '100vh',
   },
   swipeToRefreshContainer: {
-    width: '200vw',
-    height: '200vw',
+    overflow: 'scroll',
+    width: '100%',
+    height: '50vh',
+    border: '1px solid blue',
+    fontSize: '3rem',
   },
 });
 
@@ -45,13 +48,11 @@ export default class Component extends React.Component {
       <div className={classes.root}>
         <MaterialSwipeToRefresh>
           <div className={classes.swipeToRefreshContainer}>
-            The Touch.radiusX, Touch.radiusY, and Touch.rotationAngle describe the area of contact between the user and the screen, the touch area. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip).
-            The Touch.radiusX, Touch.radiusY, and Touch.rotationAngle describe the area of contact between the user and the screen, the touch area. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip).
-            The Touch.radiusX, Touch.radiusY, and Touch.rotationAngle describe the area of contact between the user and the screen, the touch area. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip).
-            The Touch.radiusX, Touch.radiusY, and Touch.rotationAngle describe the area of contact between the user and the screen, the touch area. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip).
-            The Touch.radiusX, Touch.radiusY, and Touch.rotationAngle describe the area of contact between the user and the screen, the touch area. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip).
-            The Touch.radiusX, Touch.radiusY, and Touch.rotationAngle describe the area of contact between the user and the screen, the touch area. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip).
-            The Touch.radiusX, Touch.radiusY, and Touch.rotationAngle describe the area of contact between the user and the screen, the touch area. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip).
+            {
+              Array(100).fill(1).map((item, index) => {
+                return <div key={index}>Scroll Area</div>;
+              })
+            }
           </div>
         </MaterialSwipeToRefresh>
       </div>
