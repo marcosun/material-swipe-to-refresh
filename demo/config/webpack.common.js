@@ -59,7 +59,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       template: require('html-webpack-template'),
-      
+
+      mobile: true,
       title: 'HtmlWebpackPlugin',
       appMountId: 'app'
     })
