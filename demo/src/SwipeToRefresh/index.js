@@ -38,6 +38,8 @@ export default class Component extends React.Component {
     this.state = {
       isLoading: false,
     };
+
+    this.childRef = React.createRef();
   }
 
   /**
@@ -73,8 +75,9 @@ export default class Component extends React.Component {
         <MaterialSwipeToRefresh
           onRefresh={this.onRefresh.bind(this)}
           isLoading={isLoading}
+          childRef={this.childRef}
         >
-          <div className={classes.swipeToRefreshContainer}>
+          <div className={classes.swipeToRefreshContainer} ref={this.childRef}>
             {
               Array(100).fill(1).map((item, index) => {
                 return <div key={index}>Scroll Area</div>;
