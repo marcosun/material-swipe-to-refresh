@@ -34,6 +34,26 @@ export default class Component extends React.Component {
    */
   constructor(props) {
     super(props);
+
+    this.state = {
+      isLoading: false,
+    };
+  }
+
+  /**
+   * Hook onRefresh event
+   */
+  onRefresh() {
+    this.setState({
+      isLoading: true,
+    });
+
+    // Some asnyc functions
+    setTimeout(() => {
+      this.setState({
+        isLoading: false,
+      });
+    }, 5000);
   }
 
   /**
@@ -44,9 +64,16 @@ export default class Component extends React.Component {
       classes,
     } = this.props;
 
+    const {
+      isLoading,
+    } = this.state;
+
     return (
       <div className={classes.root}>
-        <MaterialSwipeToRefresh>
+        <MaterialSwipeToRefresh
+          onRefresh={this.onRefresh.bind(this)}
+          isLoading={isLoading}
+        >
           <div className={classes.swipeToRefreshContainer}>
             {
               Array(100).fill(1).map((item, index) => {
