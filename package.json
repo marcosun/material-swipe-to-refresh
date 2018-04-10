@@ -1,6 +1,6 @@
 {
   "name": "material-swipe-to-refresh",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Swipe to refresh implemented with material design",
   "main": "cjs/index.js",
   "scripts": {
