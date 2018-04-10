@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "Swipe to refresh implemented with material design",
   "main": "cjs/index.js",
-  "module": "lib/index.js",
   "scripts": {
     "build:dev": "node ./config/build.dev.js",
     "build:prod": "node ./config/build.prod.js",
